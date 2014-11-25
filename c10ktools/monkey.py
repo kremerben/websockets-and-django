@@ -8,16 +8,19 @@ def run(addr, port, wsgi_handler, loop=None, stop=None, **options):
     Alternate version of django.core.servers.basehttp.run running on asyncio.
     """
     if loop is None:
+        # create asyncio event loop
         loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
     # The code that reads environ['wsgi.input'] is deep inside Django and hard
     # to make asynchronous. Pre-loading the payload is the simplest option.
     protocol_factory = lambda: WSGIServerHttpProtocol(
             wsgi_handler, readpayload=True)
+    #create webserver
     server = loop.run_until_complete(
             loop.create_server(protocol_factory, addr, port))
     try:
         if stop is None:
+            # start running loop
             loop.run_forever()
         else:
             loop.run_until_complete(stop)

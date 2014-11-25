@@ -1,0 +1,15 @@
+<!DOCTYPE html>{% load static from staticfiles %}
+<html>
+    <head>
+        <title>WebSocket chat test</title>
+    </head>
+    <body>
+        <ul id="messages">
+        </ul>
+        <form id="form">
+            <input type="text" id="text">
+            <input type="submit">
+        </form>
+        <script src="{% static 'chat/chatter.js' %}"></script>
+    </body>
+</html>
