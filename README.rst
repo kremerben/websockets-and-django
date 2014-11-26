@@ -3,6 +3,8 @@ README
 
 CLONED FROM: aaugustin/django-c10k-demo.git
 .............
+ADDED Chat Application
+.............
 
 django-c10k-demo is an experimental playground for high concurrency in Django
 with WebSockets.
