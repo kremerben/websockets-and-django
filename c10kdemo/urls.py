@@ -4,6 +4,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = patterns('',
     url(r'^test/', include('c10ktools.urls')),
+    url(r'^chat/', include('chat.urls')),
     url(r'', include('gameoflife.urls')),
 
 )

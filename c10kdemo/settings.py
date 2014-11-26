@@ -14,6 +14,7 @@ DEBUG = True
 INSTALLED_APPS = (
     'c10ktools',
     'gameoflife',
+    'chat',
     'django.contrib.staticfiles',
 )
 

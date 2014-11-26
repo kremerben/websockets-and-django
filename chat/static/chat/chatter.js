@@ -1,6 +1,7 @@
 window.onload = function () {
 
     function show_message(message) {
+//        console.log(message);
         var messages = document.getElementById("messages");
         var item = document.createElement("li");
         var content = document.createTextNode(message);
